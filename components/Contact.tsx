@@ -39,13 +39,13 @@ export function Contact() {
                         </Link>
                     </Button>
                     <Button size="lg" variant="outline" className="h-12 px-8 text-base rounded-full" asChild>
-                        <Link href="https://linkedin.com/in/mohammedzamil" target="_blank">
+                        <Link href="https://www.linkedin.com/in/mohammed-zamil/" target="_blank">
                             <Linkedin className="mr-2 h-5 w-5" />
                             LinkedIn
                         </Link>
                     </Button>
                     <Button size="lg" variant="ghost" className="h-12 px-8 text-base rounded-full" asChild>
-                        <Link href="https://github.com/mohammedzamil" target="_blank">
+                        <Link href="https://github.com/mhd-zam" target="_blank">
                             <Github className="mr-2 h-5 w-5" />
                             GitHub
                         </Link>
