@@ -1,5 +1,6 @@
 'use client';
 
+import { scrollToSection } from '@/lib/utils';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -29,6 +30,7 @@ export function Navbar() {
                         <Link
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => scrollToSection(e, link.href)}
                             className="text-sm font-medium text-white/70 hover:text-white transition-colors relative group"
                         >
                             {link.name}
@@ -39,7 +41,12 @@ export function Navbar() {
 
                 <div className="flex items-center">
                     <Button variant="ghost" size="sm" asChild className="rounded-full hover:bg-white/10 text-white hover:text-white px-4">
-                        <Link href="#contact">Contact</Link>
+                        <Link
+                            href="#contact"
+                            onClick={(e) => scrollToSection(e, "#contact")}
+                        >
+                            Contact
+                        </Link>
                     </Button>
                 </div>
             </div>

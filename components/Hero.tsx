@@ -6,6 +6,7 @@ import { ArrowRight, Download, Terminal, Code2, Database, Layout } from "lucide-
 import Link from "next/link";
 import { Spotlight } from "@/components/ui/spotlight";
 import { Badge } from "@/components/ui/badge";
+import { scrollToSection } from '@/lib/utils';
 
 export function Hero() {
     return (
@@ -54,13 +55,21 @@ export function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 w-full sm:w-auto"
                 >
-                    <Link href="#projects" className="w-full sm:w-auto">
+                    <Link
+                        href="#projects"
+                        className="w-full sm:w-auto"
+                        onClick={(e) => scrollToSection(e, "#projects")}
+                    >
                         <Button size="lg" className="w-full sm:w-auto h-12 px-8 text-base rounded-full bg-white text-black hover:bg-white/90 font-medium">
                             View Scenarios
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </Link>
-                    <Link href="#contact" className="w-full sm:w-auto">
+                    <Link
+                        href="#contact"
+                        className="w-full sm:w-auto"
+                        onClick={(e) => scrollToSection(e, "#contact")}
+                    >
                         <Button variant="outline" size="lg" className="w-full sm:w-auto h-12 px-8 text-base rounded-full border-white/10 hover:bg-white/5 hover:text-white hover:border-white/20">
                             Contact Me
                         </Button>
